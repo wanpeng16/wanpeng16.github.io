@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#13283a" />
+    <meta
+      name="description"
+      content="万鹏，南京航空航天大学研究者。研究方向：超声机器人、具身智能、医学超声影像、多模态融合与可信学习。"
+    />
+    <meta property="og:title" content="万鹏 · 学术主页" />
+    <meta
+      property="og:description"
+      content="万鹏，面向超声机器人与具身智能开展医学人工智能交叉研究。"
+    />
+    <meta property="og:type" content="website" />
+    <title>万鹏 · 学术主页</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "万鹏",
+        "affiliation": {
+          "@type": "CollegeOrUniversity",
+          "name": "南京航空航天大学"
+        },
+        "url": "https://faculty.nuaa.edu.cn/wanpeng/zh_CN/index.htm",
+        "sameAs": ["https://orcid.org/0000-0002-6094-7250"],
+        "knowsAbout": [
+          "Artificial Intelligence",
+          "Ultrasound Robotics",
+          "Embodied Intelligence",
+          "Medical Ultrasound Imaging",
+          "Multimodal Fusion",
+          "Trustworthy Machine Learning"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header" data-header>
+        <a class="brand" href="#top" aria-label="返回首页">
+          <span class="brand-mark">W</span>
+          <span class="brand-copy">
+            <strong>万鹏</strong>
+            <small>ACADEMIC PROFILE</small>
+          </span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+          <em>菜单</em>
+        </button>
+
+        <nav class="main-nav" id="main-nav" aria-label="主导航">
+          <a class="nav-link is-active" href="#about">关于我</a>
+          <a class="nav-link" href="#research">研究方向</a>
+          <a class="nav-link" href="#recruitment">招生联系</a>
+          <a class="nav-link" href="#publications">论文</a>
+          <a class="nav-link" href="#projects">项目</a>
+          <a class="nav-link" href="#teaching">教学与荣誉</a>
+          <a class="nav-link" href="#team">团队风采</a>
+        </nav>
+
+        <a class="header-link" href="https://orcid.org/0000-0002-6094-7250" target="_blank" rel="noreferrer">
+          <span>ORCID</span>
+          <span class="arrow">↗</span>
+        </a>
+      </header>
+
+      <main id="top">
+        <section class="hero section" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-dot"></span> Nanjing University of Aeronautics and Astronautics</p>
+            <p class="hero-kicker">ULTRASOUND ROBOTICS · EMBODIED AI · MEDICAL VISION</p>
+            <h1 id="hero-title">让超声机器人，<br /><span>学会理解与行动。</span></h1>
+            <p class="hero-intro">
+              我是万鹏，现于南京航空航天大学开展研究。面向超声机器人与具身智能的前沿交叉，
+              研究让机器“看懂”超声、理解环境，并在真实医学场景中做出可靠行动的方法。
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#recruitment">加入研究团队 <span>↓</span></a>
+              <a class="text-link" href="https://faculty.nuaa.edu.cn/wanpeng/zh_CN/index.htm" target="_blank" rel="noreferrer">
+                官方教师主页 <span>↗</span>
+              </a>
+              <a class="text-link admissions-link" href="mailto:pengwan@nuaa.edu.cn">
+                学生联系邮箱 <span>↗</span>
+              </a>
+            </div>
+            <div class="hero-meta">
+              <div>
+                <span class="meta-label">研究地点</span>
+                <strong>南京 · 中国</strong>
+              </div>
+              <div>
+                <span class="meta-label">所在单位</span>
+                <strong>南京航空航天大学</strong>
+              </div>
+              <div>
+                <span class="meta-label">ORCID</span>
+                <a href="https://orcid.org/0000-0002-6094-7250" target="_blank" rel="noreferrer">0000-0002-6094-7250</a>
+              </div>
+              <div class="hero-email">
+                <span class="meta-label">招生联系</span>
+                <a href="mailto:pengwan@nuaa.edu.cn">pengwan@nuaa.edu.cn</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="个人照片与研究主题视觉">
+            <div class="visual-orbit orbit-one"></div>
+            <div class="visual-orbit orbit-two"></div>
+            <div class="visual-orbit orbit-three"></div>
+            <div class="visual-grid"></div>
+            <canvas class="signal-canvas" data-signal-canvas aria-hidden="true"></canvas>
+            <div class="visual-label visual-label-top">TRUSTWORTHY<br />MEDICAL AI</div>
+            <div class="visual-label visual-label-bottom">ULTRASOUND / 01</div>
+            <figure class="portrait-card">
+              <div class="portrait-image-wrap">
+                <img src="assets/portrait.jpg" alt="万鹏个人照片" />
+                <span class="portrait-sheen"></span>
+              </div>
+              <figcaption>
+                <span class="portrait-caption-kicker">WAN PENG</span>
+                <span class="portrait-caption-main">研究 · 教学 · 真实世界</span>
+              </figcaption>
+            </figure>
+            <span class="visual-coordinate coord-one">32°03′N</span>
+            <span class="visual-coordinate coord-two">118°48′E</span>
+          </div>
+        </section>
+
+        <section class="signal-strip" aria-label="学术概览">
+          <div class="strip-item">
+            <span class="strip-index">01</span>
+            <strong>AI × 医学影像</strong>
+            <span>交叉研究</span>
+          </div>
+          <div class="strip-item">
+            <span class="strip-index">02</span>
+            <strong>可信多模态融合</strong>
+            <span>研究主线</span>
+          </div>
+          <div class="strip-item">
+            <span class="strip-index">03</span>
+            <strong>真实临床场景</strong>
+            <span>应用目标</span>
+          </div>
+          <div class="strip-item strip-item-last">
+            <span class="strip-index">04</span>
+            <strong>开放合作</strong>
+            <span>欢迎交流</span>
+          </div>
+        </section>
+
+        <section class="section recruitment-section" id="recruitment" aria-labelledby="recruitment-title">
+          <div class="section-heading">
+            <div>
+              <p class="section-number">OPEN / JOIN THE FRONTIER</p>
+              <h2 id="recruitment-title">从看见，走向行动</h2>
+            </div>
+            <p class="section-lede">欢迎对超声医学人工智能、超声机器人和具身智能感兴趣的同学联系交流。</p>
+          </div>
+          <div class="recruitment-grid">
+            <div class="recruitment-copy reveal">
+              <p class="recruitment-tag">RESEARCH RECRUITMENT / 2026</p>
+              <p class="recruitment-statement">我们正在把超声影像的“感知”，连接到机器人系统的“行动”。</p>
+              <p class="recruitment-body">
+                研究将围绕超声机器人感知、医学影像理解、具身智能决策与可信交互展开，
+                期待与有计算机视觉、机器学习、机器人、医学工程背景的同学一起，把算法推进到真实场景。
+              </p>
+              <div class="recruitment-contact">
+                <span class="contact-label">欢迎学生积极联系</span>
+                <a href="mailto:pengwan@nuaa.edu.cn">pengwan@nuaa.edu.cn <span>↗</span></a>
+              </div>
+            </div>
+            <div class="video-library reveal">
+              <article class="video-card video-card-hero">
+                <div class="video-card-meta"><span>01 / FLAGSHIP RESEARCH</span><span>ULTRASOUND ROBOTICS</span></div>
+                <div class="video-frame">
+                  <video controls preload="metadata" playsinline aria-label="超声机器人研究视频">
+                    <source src="视频素材/超声机器人.mp4" type="video/mp4" />
+                  </video>
+                  <span class="video-frame-label">PERCEPTION → ACTION</span>
+                  <span class="video-play-hint"><span>▶</span> PLAY RESEARCH REEL</span>
+                </div>
+                <div class="video-caption"><div><strong>超声机器人</strong><span>感知 · 定位 · 操作</span></div><a href="视频素材/超声机器人.mp4" target="_blank" rel="noreferrer" aria-label="打开超声机器人视频">↗</a></div>
+              </article>
+              <div class="video-grid">
+                <article class="video-card">
+                  <div class="video-card-meta"><span>02</span><span>EMBODIED SYSTEM</span></div>
+                  <div class="video-frame"><video controls preload="metadata" playsinline aria-label="机械臂与具身系统研究视频"><source src="视频素材/机械臂视频1080p+BGM.mp4" type="video/mp4" /></video><span class="video-frame-label">ARM / LOOP</span><span class="video-play-hint"><span>▶</span></span></div>
+                  <div class="video-caption"><div><strong>机械臂与具身系统</strong><span>动作 · 交互 · 闭环</span></div><a href="视频素材/机械臂视频1080p+BGM.mp4" target="_blank" rel="noreferrer" aria-label="打开机械臂视频">↗</a></div>
+                </article>
+                <article class="video-card">
+                  <div class="video-card-meta"><span>03</span><span>SURGICAL NAVIGATION</span></div>
+                  <div class="video-frame"><video controls preload="metadata" playsinline aria-label="手术导航研究视频"><source src="视频素材/手术导航.MOV" type="video/quicktime" /></video><span class="video-frame-label">GUIDANCE / 03</span><span class="video-play-hint"><span>▶</span></span></div>
+                  <div class="video-caption"><div><strong>手术导航</strong><span>空间 · 规划 · 辅助</span></div><a href="视频素材/手术导航.MOV" target="_blank" rel="noreferrer" aria-label="打开手术导航视频">↗</a></div>
+                </article>
+                <article class="video-card">
+                  <div class="video-card-meta"><span>04</span><span>SPINAL ULTRASOUND</span></div>
+                  <div class="video-frame"><video controls preload="metadata" playsinline aria-label="腰椎导航研究视频"><source src="视频素材/导航-腰椎.mp4" type="video/mp4" /></video><span class="video-frame-label">SPINE / 04</span><span class="video-play-hint"><span>▶</span></span></div>
+                  <div class="video-caption"><div><strong>腰椎导航</strong><span>定位 · 轨迹 · 反馈</span></div><a href="视频素材/导航-腰椎.mp4" target="_blank" rel="noreferrer" aria-label="打开腰椎导航视频">↗</a></div>
+                </article>
+                <article class="video-card">
+                  <div class="video-card-meta"><span>05</span><span>CAPSULE ROBOT</span></div>
+                  <div class="video-frame"><video controls preload="metadata" playsinline aria-label="胶囊机器人研究视频"><source src="视频素材/胶囊机器人.webm" type="video/webm" /></video><span class="video-frame-label">MICRO ROBOT / 05</span><span class="video-play-hint"><span>▶</span></span></div>
+                  <div class="video-caption"><div><strong>胶囊机器人</strong><span>微型 · 自主 · 感知</span></div><a href="视频素材/胶囊机器人.webm" target="_blank" rel="noreferrer" aria-label="打开胶囊机器人视频">↗</a></div>
+                </article>
+                <article class="video-card">
+                  <div class="video-card-meta"><span>06</span><span>VR ORTHOPEDICS</span></div>
+                  <div class="video-frame"><video controls preload="metadata" playsinline aria-label="VR骨科研究视频"><source src="视频素材/VR骨科.mp4" type="video/mp4" /></video><span class="video-frame-label">VR / 06</span><span class="video-play-hint"><span>▶</span></span></div>
+                  <div class="video-caption"><div><strong>VR 骨科</strong><span>沉浸 · 训练 · 规划</span></div><a href="视频素材/VR骨科.mp4" target="_blank" rel="noreferrer" aria-label="打开 VR 骨科视频">↗</a></div>
+                </article>
+                <article class="video-card">
+                  <div class="video-card-meta"><span>07</span><span>STUDENT PROJECT</span></div>
+                  <div class="video-frame"><video controls preload="metadata" playsinline aria-label="挑战杯学生项目视频"><source src="视频素材/挑战杯（赵德政）.mp4" type="video/mp4" /></video><span class="video-frame-label">CHALLENGE CUP / 07</span><span class="video-play-hint"><span>▶</span></span></div>
+                  <div class="video-caption"><div><strong>挑战杯项目</strong><span>学生 · 创新 · 转化</span></div><a href="视频素材/挑战杯（赵德政）.mp4" target="_blank" rel="noreferrer" aria-label="打开挑战杯项目视频">↗</a></div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section about-section" id="about" aria-labelledby="about-title">
+          <div class="section-heading">
+            <div>
+              <p class="section-number">01 / PROFILE</p>
+              <h2 id="about-title">关于我</h2>
+            </div>
+            <p class="section-lede">以计算机科学为起点，沿着医学影像这条真实而复杂的路径持续深入。</p>
+          </div>
+          <div class="about-grid">
+            <div class="about-statement reveal">
+              <p class="quote-mark">“</p>
+              <p class="statement-text">
+                我相信，好的医学人工智能不仅要在指标上有效，也要在面对不确定性时诚实，
+                在面对医生和患者时可解释，在面对真实数据时保持韧性。
+              </p>
+              <p class="statement-note">— 研究理念 / Research note</p>
+            </div>
+            <div class="profile-details reveal">
+              <div class="detail-row">
+                <span>姓名</span>
+                <strong>万鹏</strong>
+              </div>
+              <div class="detail-row">
+                <span>现任职务</span>
+                <strong>南京航空航天大学</strong>
+              </div>
+              <div class="detail-row">
+                <span>所在单位</span>
+                <strong>南京航空航天大学</strong>
+              </div>
+              <div class="detail-row">
+                <span>研究方向</span>
+                <strong>人工智能 / 医学超声</strong>
+              </div>
+              <div class="detail-row">
+                <span>入职时间</span>
+                <strong>2023 — 至今</strong>
+              </div>
+              <div class="detail-row">
+                <span>学术身份</span>
+                <a href="https://orcid.org/0000-0002-6094-7250" target="_blank" rel="noreferrer">ORCID ↗</a>
+              </div>
+            </div>
+          </div>
+          <div class="education-line reveal">
+            <div class="education-label">EDUCATION</div>
+            <div class="education-item">
+              <span class="education-year">2011—2015</span>
+              <div>
+                <strong>南京邮电大学</strong>
+                <span>通信工程 · 工学学士</span>
+              </div>
+            </div>
+            <div class="education-item">
+              <span class="education-year">2015—2018</span>
+              <div>
+                <strong>北京邮电大学</strong>
+                <span>电子通信工程 · 工学硕士</span>
+              </div>
+            </div>
+            <div class="education-item">
+              <span class="education-year">2018—2022</span>
+              <div>
+                <strong>南京航空航天大学</strong>
+                <span>计算机科学与技术 · 工学博士</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section research-section" id="research" aria-labelledby="research-title">
+          <div class="section-heading">
+            <div>
+              <p class="section-number">02 / RESEARCH</p>
+              <h2 id="research-title">研究方向</h2>
+            </div>
+            <p class="section-lede">从模态、机制到可信决策，探索医学影像智能分析的下一种可能。</p>
+          </div>
+          <div class="research-intro reveal">
+            <span class="intro-tag">FOCUS AREAS</span>
+            <p>
+              我的研究围绕医学超声影像中的建模、融合与推理展开，
+              尝试把深度学习的表征能力转化为临床可理解、可验证、可迁移的工具。
+            </p>
+          </div>
+          <div class="research-cards">
+            <article class="research-card reveal">
+              <div class="card-topline"><span>01</span><span class="card-symbol">◎</span></div>
+              <h3>可信多模态融合</h3>
+              <p class="card-en">Trustworthy Multimodal Fusion</p>
+              <p>面对不同模态之间的互补与冲突，研究不确定性校准、冲突解析与可信决策。</p>
+              <div class="card-footer"><span>UNCERTAINTY</span><span>FUSION</span></div>
+            </article>
+            <article class="research-card research-card-featured reveal">
+              <div class="card-topline"><span>02</span><span class="card-symbol">⌁</span></div>
+              <h3>医学超声智能分析</h3>
+              <p class="card-en">Intelligent Ultrasound Analysis</p>
+              <p>聚焦肝脏、肝灌注与超声造影，构建从影像表征到诊断辅助的完整方法链。</p>
+              <div class="card-footer"><span>CEUS</span><span>LIVER</span></div>
+            </article>
+            <article class="research-card reveal">
+              <div class="card-topline"><span>03</span><span class="card-symbol">✳</span></div>
+              <h3>协同推理与可解释学习</h3>
+              <p class="card-en">Collaborative Reasoning</p>
+              <p>探索协同推理、数据增强和因果启发的学习机制，让模型的判断过程更清晰。</p>
+              <div class="card-footer"><span>REASONING</span><span>EXPLAINABILITY</span></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section publications-section" id="publications" aria-labelledby="publications-title">
+          <div class="section-heading">
+            <div>
+              <p class="section-number">03 / PUBLICATIONS</p>
+              <h2 id="publications-title">代表论文</h2>
+            </div>
+            <p class="section-lede">把方法写进论文，也把问题留在真实世界里继续追问。</p>
+          </div>
+          <div class="publication-overview">
+            <div class="publication-count"><strong data-publication-count>37</strong><span>条发表记录</span></div>
+            <p>以下目录按你新增的“个人发表”文件夹整理。每条记录均可打开对应原始 PDF。</p>
+          </div>
+          <div class="publication-toolbar" aria-label="发表目录筛选">
+            <div class="publication-filters" role="group" aria-label="按类型筛选">
+              <button class="filter-button is-active" type="button" data-publication-filter="all">全部 <span>37</span></button>
+              <button class="filter-button" type="button" data-publication-filter="journal">期刊 <span>15</span></button>
+              <button class="filter-button" type="button" data-publication-filter="conference">会议 <span>11</span></button>
+              <button class="filter-button" type="button" data-publication-filter="preprint">预印本 <span>4</span></button>
+              <button class="filter-button" type="button" data-publication-filter="book">书章 <span>7</span></button>
+            </div>
+            <label class="publication-search">
+              <span class="sr-only">搜索发表记录</span>
+              <input type="search" placeholder="搜索题目或期刊" data-publication-search />
+              <span aria-hidden="true">⌕</span>
+            </label>
+          </div>
+          <div class="publication-list" id="publication-list" aria-live="polite"></div>
+          <p class="section-footnote">记录来源：个人发表目录 · 题目、作者、期刊与年份按 PDF 首页元数据整理</p>
+        </section>
+
+        <section class="section projects-section" id="projects" aria-labelledby="projects-title">
+          <div class="section-heading">
+            <div>
+              <p class="section-number">04 / PROJECTS</p>
+              <h2 id="projects-title">科研项目</h2>
+            </div>
+            <p class="section-lede">以问题为起点，以可落地的方法和持续的合作抵达下一步。</p>
+          </div>
+          <div class="projects-layout">
+            <div class="projects-summary reveal">
+              <div class="summary-number">10</div>
+              <p>资料中记录的<br /><strong>在研 / 已结题项目</strong></p>
+              <div class="summary-rule"></div>
+              <p class="summary-small">涵盖国家自然科学基金、省级基金、博士后计划、校级人才启动基金与横向合作。</p>
+            </div>
+            <div class="project-timeline">
+              <article class="project-item reveal">
+                <div class="project-year">2024—<br />至今</div>
+                <div class="project-body">
+                  <div class="project-title-line"><span class="project-status status-active">在研 · 主持</span><span class="project-code">01</span></div>
+                  <h3>面向肝脏超声造影的模态表征与可信融合方法研究</h3>
+                  <p>国家自然科学基金 · 青年科学基金项目</p>
+                </div>
+              </article>
+              <article class="project-item reveal">
+                <div class="project-year">2024—<br />至今</div>
+                <div class="project-body">
+                  <div class="project-title-line"><span class="project-status status-active">在研 · 主持</span><span class="project-code">02</span></div>
+                  <h3>肝脏超声造影中的模态表征与时相融合机制研究</h3>
+                  <p>江苏省自然科学基金 · 青年基金</p>
+                </div>
+              </article>
+              <article class="project-item reveal">
+                <div class="project-year">2024—<br />至今</div>
+                <div class="project-body">
+                  <div class="project-title-line"><span class="project-status status-active">在研 · 主持</span><span class="project-code">03</span></div>
+                  <h3>基于超声造影的肝灌注模态精准分析方法研究</h3>
+                  <p>国家资助博士后研究人员计划</p>
+                </div>
+              </article>
+              <article class="project-item reveal">
+                <div class="project-year">2025—<br />至今</div>
+                <div class="project-body">
+                  <div class="project-title-line"><span class="project-status status-active">在研 · 主持</span><span class="project-code">04</span></div>
+                  <h3>大模型技术咨询与定制化培训服务</h3>
+                  <p>横向项目 · 企业、事业单位委托</p>
+                </div>
+              </article>
+              <article class="project-item reveal">
+                <div class="project-year">2023—<br />至今</div>
+                <div class="project-body">
+                  <div class="project-title-line"><span class="project-status status-participate">在研 · 参与</span><span class="project-code">05</span></div>
+                  <h3>全脑结构连接图谱构建理论与技术</h3>
+                  <p>国家重点研发计划 · 课题</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section teaching-section" id="teaching" aria-labelledby="teaching-title">
+          <div class="section-heading">
+            <div>
+              <p class="section-number">05 / TEACHING &amp; HONORS</p>
+              <h2 id="teaching-title">教学与荣誉</h2>
+            </div>
+            <p class="section-lede">把复杂的问题讲清楚，也把好奇心交到下一代手里。</p>
+          </div>
+          <div class="teaching-grid">
+            <article class="honor-card honor-card-dark reveal">
+              <div class="honor-card-top"><span>TEACHING AWARD</span><span>2025</span></div>
+              <div class="honor-card-icon">✦</div>
+              <h3>教师教学创新大赛</h3>
+              <p>校级 · 二等奖 · 第三等次</p>
+              <div class="honor-card-bottom">主讲 / 南京航空航天大学</div>
+            </article>
+            <article class="honor-card honor-card-light reveal">
+              <div class="honor-card-top"><span>MENTORING</span><span>2025</span></div>
+              <div class="honor-card-icon">↗</div>
+              <h3>“挑战杯”专项赛</h3>
+              <p>指导学生获全国大学生课外学术科技作品竞赛“人工智能”专项赛应用赛一等奖</p>
+              <div class="honor-card-bottom">项目排名 / 3</div>
+            </article>
+            <article class="honor-card honor-card-outline reveal">
+              <div class="honor-card-top"><span>INVENTION PATENT</span><span>2025</span></div>
+              <div class="honor-card-icon">＋</div>
+              <h3>多模态超声融合系统及其方法</h3>
+              <p>一种基于动态冲突感知的多模态超声融合系统及其方法</p>
+              <div class="honor-card-bottom">专利号 / ZL202510101157.1</div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section team-section" id="team" aria-labelledby="team-title">
+          <div class="section-heading">
+            <div>
+              <p class="section-number">06 / TEAM LIFE</p>
+              <h2 id="team-title">课题组团建</h2>
+            </div>
+            <p class="section-lede">在实验室之外并肩行走，也在真实的相处中建立长期合作。</p>
+          </div>
+          <div class="team-gallery">
+            <figure class="team-photo team-photo-tall reveal">
+              <img src="assets/team-outing.jpg" alt="课题组团队秋游合影" loading="lazy" />
+              <figcaption><span>TEAM OUTING / 01</span><strong>一起出发，保持好奇</strong></figcaption>
+            </figure>
+            <figure class="team-photo team-photo-wide reveal">
+              <img src="assets/team-outing-2.jpg" alt="课题组团队秋游活动" loading="lazy" />
+              <figcaption><span>TEAM OUTING / 02</span><strong>并肩工作，也共享日常</strong></figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="contact-section" aria-labelledby="contact-title">
+          <div class="contact-orbit" aria-hidden="true"></div>
+          <div class="contact-copy">
+            <p class="section-number">OPEN FOR DIALOGUE</p>
+            <h2 id="contact-title">一起讨论一个<br /><span>值得研究的问题。</span></h2>
+            <p>欢迎围绕医学人工智能、超声影像分析与可信学习展开学术交流与合作。</p>
+          </div>
+          <div class="contact-links">
+            <a href="https://faculty.nuaa.edu.cn/wanpeng/zh_CN/index.htm" target="_blank" rel="noreferrer">
+              <span>官方教师主页</span><span>↗</span>
+            </a>
+            <a href="https://orcid.org/0000-0002-6094-7250" target="_blank" rel="noreferrer">
+              <span>ORCID 0000-0002-6094-7250</span><span>↗</span>
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-brand"><span class="brand-mark">W</span><span>万鹏 · 学术主页</span></div>
+        <p>© <span data-current-year></span> Wan Peng. Built for research, teaching &amp; collaboration.</p>
+        <a href="#top" class="back-top">回到顶部 ↑</a>
+      </footer>
+    </div>
+    <div class="scroll-progress" data-scroll-progress></div>
+    <script src="app.js"></script>
+  </body>
+</html>
