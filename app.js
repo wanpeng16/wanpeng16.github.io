@@ -145,6 +145,87 @@
     sections.forEach((section) => sectionObserver.observe(section));
   }
 
+  // A restrained synthesized bed keeps the research reels atmospheric without adding a large audio asset.
+  const techVideos = [...document.querySelectorAll("video[data-tech-audio]")];
+  const techToggles = [...document.querySelectorAll(".video-audio-toggle")];
+  const techAudio = {
+    context: null,
+    master: null,
+    timer: null,
+    activeVideo: null,
+    enabled: new Map(techVideos.map((video) => [video, true])),
+  };
+  const makeTechAudio = () => {
+    if (techAudio.context) return techAudio.context;
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    if (!AudioContext) return null;
+    techAudio.context = new AudioContext();
+    techAudio.master = techAudio.context.createGain();
+    techAudio.master.gain.value = 0.055;
+    techAudio.master.connect(techAudio.context.destination);
+    return techAudio.context;
+  };
+  const tickTechAudio = () => {
+    const context = techAudio.context;
+    if (!context || !techAudio.master) return;
+    const now = context.currentTime;
+    const step = Math.floor(now * 2) % 8;
+    const bass = context.createOscillator();
+    const bassGain = context.createGain();
+    bass.type = "sine";
+    bass.frequency.value = [55, 55, 73.42, 65.41, 55, 82.41, 73.42, 65.41][step];
+    bassGain.gain.setValueAtTime(0.0001, now);
+    bassGain.gain.exponentialRampToValueAtTime(0.18, now + 0.025);
+    bassGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.42);
+    bass.connect(bassGain).connect(techAudio.master);
+    bass.start(now);
+    bass.stop(now + 0.45);
+    if (step % 2 === 0) {
+      const ping = context.createOscillator();
+      const pingGain = context.createGain();
+      ping.type = "triangle";
+      ping.frequency.value = [220, 277.18, 329.63, 440][(step / 2) % 4];
+      pingGain.gain.setValueAtTime(0.0001, now);
+      pingGain.gain.exponentialRampToValueAtTime(0.035, now + 0.01);
+      pingGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.18);
+      ping.connect(pingGain).connect(techAudio.master);
+      ping.start(now);
+      ping.stop(now + 0.2);
+    }
+  };
+  const stopTechAudio = (video) => {
+    if (techAudio.activeVideo !== video) return;
+    window.clearInterval(techAudio.timer);
+    techAudio.timer = null;
+    techAudio.activeVideo = null;
+  };
+  const startTechAudio = (video) => {
+    if (!techAudio.enabled.get(video)) return;
+    const context = makeTechAudio();
+    if (!context) return;
+    if (context.state === "suspended") context.resume();
+    if (techAudio.activeVideo === video) return;
+    if (techAudio.activeVideo) stopTechAudio(techAudio.activeVideo);
+    techAudio.activeVideo = video;
+    tickTechAudio();
+    techAudio.timer = window.setInterval(tickTechAudio, 500);
+  };
+  techVideos.forEach((video, index) => {
+    video.addEventListener("play", () => startTechAudio(video));
+    video.addEventListener("pause", () => stopTechAudio(video));
+    video.addEventListener("ended", () => stopTechAudio(video));
+    const toggle = techToggles[index];
+    toggle?.addEventListener("click", () => {
+      const enabled = !techAudio.enabled.get(video);
+      techAudio.enabled.set(video, enabled);
+      toggle.setAttribute("aria-pressed", String(enabled));
+      toggle.textContent = enabled ? "♪ 科技音轨" : "♪ 静音音轨";
+      toggle.setAttribute("aria-label", `${enabled ? "关闭" : "开启"}科技音轨`);
+      if (enabled && !video.paused) startTechAudio(video);
+      if (!enabled) stopTechAudio(video);
+    });
+  });
+
   const canvas = document.querySelector("[data-signal-canvas]");
   const visual = canvas?.parentElement;
   if (!canvas || !visual || !window.requestAnimationFrame) return;
