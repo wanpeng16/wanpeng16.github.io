@@ -19,6 +19,8 @@
 }
 
 * { box-sizing: border-box; }
+img, video, svg { max-width: 100%; }
+img, video { height: auto; }
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
@@ -188,9 +190,9 @@ h1 span, .contact-copy h2 span { color: var(--teal); }
 .prototype-kicker span { width: 7px; height: 7px; border-radius: 50%; background: var(--teal-bright); box-shadow: 0 0 0 5px rgba(128,217,208,.1), 0 0 18px var(--teal-bright); animation: prototype-pulse 1.8s ease-in-out infinite; }
 .prototype-header h3 { margin: 0; font-family: var(--serif); font-size: clamp(26px, 3vw, 40px); font-weight: 600; letter-spacing: -.04em; }
 .prototype-header > p { margin: 0 0 4px; color: rgba(255,255,255,.58); font-family: var(--mono); font-size: 11px; letter-spacing: .08em; }
-.prototype-stage { position: relative; display: block; margin-top: 22px; padding: clamp(9px, 1.8vw, 22px); color: var(--paper); border: 1px solid rgba(128,217,208,.35); background: radial-gradient(circle at 50% 45%, rgba(128,217,208,.18), transparent 45%), #102b3d; overflow: hidden; }
+.prototype-stage { position: relative; display: block; width: 100%; min-width: 0; margin-top: 22px; padding: clamp(9px, 1.8vw, 22px); color: var(--paper); border: 1px solid rgba(128,217,208,.35); background: radial-gradient(circle at 50% 45%, rgba(128,217,208,.18), transparent 45%), #102b3d; overflow: hidden; }
 .prototype-grid { position: absolute; inset: 0; z-index: 0; opacity: .23; background-image: linear-gradient(rgba(128,217,208,.23) 1px, transparent 1px), linear-gradient(90deg, rgba(128,217,208,.23) 1px, transparent 1px); background-size: 38px 38px; }
-.prototype-stage img { position: relative; z-index: 1; display: block; width: 100%; height: auto; background: #fff; box-shadow: 0 18px 45px rgba(3,14,23,.35); transition: transform .6s cubic-bezier(.2,.75,.25,1), filter .6s ease; }
+.prototype-stage img { position: relative; z-index: 1; display: block; width: 100%; max-width: 100%; min-width: 0; height: auto; background: #fff; box-shadow: 0 18px 45px rgba(3,14,23,.35); transition: transform .6s cubic-bezier(.2,.75,.25,1), filter .6s ease; }
 .prototype-stage:hover img { transform: scale(1.012); filter: contrast(1.025) saturate(1.08); }
 .prototype-scan { position: absolute; top: 3%; right: 2%; left: 2%; z-index: 3; height: 2px; opacity: .8; pointer-events: none; background: linear-gradient(90deg, transparent, var(--teal-bright) 16%, #fff 50%, var(--teal-bright) 84%, transparent); box-shadow: 0 0 12px var(--teal-bright), 0 9px 30px rgba(42,201,197,.38); animation: prototype-scan 5.8s ease-in-out infinite; }
 .prototype-corner { position: absolute; z-index: 4; width: 27px; height: 27px; pointer-events: none; border-color: var(--teal-bright); border-style: solid; filter: drop-shadow(0 0 5px rgba(128,217,208,.7)); }
